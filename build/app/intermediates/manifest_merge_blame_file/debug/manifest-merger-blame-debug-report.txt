@@ -1,0 +1,212 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="io.branch.branchster"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/robert.gioia/Desktop/branch_sample_flutter/android/app/src/debug/AndroidManifest.xml:7:5-66
+15-->/Users/robert.gioia/Desktop/branch_sample_flutter/android/app/src/debug/AndroidManifest.xml:7:22-64
+16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+16-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+16-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+17    <uses-permission android:name="android.permission.VIBRATE" />
+17-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
+17-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
+18    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+18-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+18-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+19    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+19-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
+19-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
+20    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Include required permissions for Advertising Id -->
+20-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
+20-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-74
+21    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+21-->[com.google.android.gms:play-services-ads-identifier:18.0.1] /Users/robert.gioia/.gradle/caches/transforms-3/26b037742a011a492f417ec4f34dbf1b/transformed/jetified-play-services-ads-identifier-18.0.1/AndroidManifest.xml:23:5-79
+21-->[com.google.android.gms:play-services-ads-identifier:18.0.1] /Users/robert.gioia/.gradle/caches/transforms-3/26b037742a011a492f417ec4f34dbf1b/transformed/jetified-play-services-ads-identifier-18.0.1/AndroidManifest.xml:23:22-76
+22    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+22-->[com.android.installreferrer:installreferrer:2.2] /Users/robert.gioia/.gradle/caches/transforms-3/6cba713c5311da64dc84aa65df87b038/transformed/jetified-installreferrer-2.2/AndroidManifest.xml:9:5-110
+22-->[com.android.installreferrer:installreferrer:2.2] /Users/robert.gioia/.gradle/caches/transforms-3/6cba713c5311da64dc84aa65df87b038/transformed/jetified-installreferrer-2.2/AndroidManifest.xml:9:22-107
+23
+24    <application
+25        android:name="android.app.Application"
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.6.0] /Users/robert.gioia/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+29        android:label="branch_sample_flutter" >
+30        <activity
+31            android:name="io.branch.branchster.MainActivity"
+32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+33            android:exported="true"
+34            android:hardwareAccelerated="true"
+35            android:launchMode="singleTask"
+36            android:theme="@style/LaunchTheme"
+37            android:windowSoftInputMode="adjustResize" >
+38
+39            <!--
+40                 Specifies an Android theme to apply to this Activity as soon as
+41                 the Android process has started. This theme is visible to the user
+42                 while the Flutter UI initializes. After that, this theme continues
+43                 to determine the Window background behind the Flutter UI.
+44            -->
+45            <meta-data
+46                android:name="io.flutter.embedding.android.NormalTheme"
+47                android:resource="@style/NormalTheme" />
+48
+49            <intent-filter>
+50                <action android:name="android.intent.action.MAIN" />
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+53            </intent-filter>
+54            <!-- Branch URI Scheme -->
+55            <intent-filter>
+56
+57                <!-- If utilizing $deeplink_path please explicitly declare your hosts, or utilize a wildcard(*) -->
+58                <data
+59                    android:host="open"
+60                    android:scheme="psmaster" />
+61
+62                <action android:name="android.intent.action.VIEW" />
+63
+64                <category android:name="android.intent.category.DEFAULT" />
+65                <category android:name="android.intent.category.BROWSABLE" />
+66            </intent-filter>
+67
+68            <!-- Branch App Links -->
+69            <intent-filter android:autoVerify="true" >
+70                <action android:name="android.intent.action.VIEW" />
+71
+72                <category android:name="android.intent.category.DEFAULT" />
+73                <category android:name="android.intent.category.BROWSABLE" />
+74
+75                <data
+76                    android:host="psmaster.app.link"
+77                    android:scheme="https" />
+78                <!-- example-alternate domain is required for App Links when the Journeys/Web SDK and Deepviews are used inside your website. -->
+79                <data
+80                    android:host="psmaster-alternate.app.link"
+81                    android:scheme="https" />
+82            </intent-filter>
+83            <intent-filter android:autoVerify="true" >
+84                <action android:name="android.intent.action.VIEW" />
+85
+86                <category android:name="android.intent.category.DEFAULT" />
+87                <category android:name="android.intent.category.BROWSABLE" />
+88
+89                <data
+90                    android:host="psmaster.test-app.link"
+91                    android:scheme="https" />
+92                <!-- example-alternate domain is required for App Links when the Journeys/Web SDK and Deepviews are used inside your website. -->
+93                <data
+94                    android:host="psmaster-alternate.test-app.link"
+95                    android:scheme="https" />
+96            </intent-filter>
+97        </activity>
+98
+99        <!-- Branch init -->
+100        <meta-data
+101            android:name="io.branch.sdk.BranchKey"
+102            android:value="key_live_ccQ8piFdCMPVysh8TLmEhghmuCk162Rr" />
+103        <meta-data
+104            android:name="io.branch.sdk.BranchKey.test"
+105            android:value="key_test_hcGYfaAnBPHUutc7SRmrSgjdCrgZ30RL" />
+106        <meta-data
+107            android:name="io.branch.sdk.TestMode"
+108            android:value="false" /> <!-- Set to true to use Branch_Test_Key (useful when simulating installs and/or switching between debug and production flavors) -->
+109
+110
+111        <!--
+112             Don't delete the meta-data below.
+113             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+114        -->
+115        <meta-data
+116            android:name="flutterEmbedding"
+117            android:value="2" />
+118
+119        <receiver
+119-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-18:40
+120            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+120-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-91
+121            android:exported="false" />
+121-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+122        <receiver
+122-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-21:40
+123            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+123-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-97
+124            android:exported="false" />
+124-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
+125        <receiver
+125-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:9-31:20
+126            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+126-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-101
+127            android:exported="false" >
+127-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-37
+128            <intent-filter>
+128-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-30:29
+129                <action android:name="android.intent.action.BOOT_COMPLETED" />
+129-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:17-79
+129-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:25-76
+130                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+130-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-84
+130-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-81
+131                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+131-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-82
+131-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-79
+132                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+132-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-82
+132-->[:flutter_local_notifications] /Users/robert.gioia/Desktop/branch_sample_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-79
+133            </intent-filter>
+134        </receiver>
+135
+136        <uses-library
+136-->[androidx.window:window:1.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/9dd2065205488e61baaf144579589300/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+137            android:name="androidx.window.extensions"
+137-->[androidx.window:window:1.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/9dd2065205488e61baaf144579589300/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+138            android:required="false" />
+138-->[androidx.window:window:1.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/9dd2065205488e61baaf144579589300/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+139        <uses-library
+139-->[androidx.window:window:1.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/9dd2065205488e61baaf144579589300/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+140            android:name="androidx.window.sidecar"
+140-->[androidx.window:window:1.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/9dd2065205488e61baaf144579589300/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+141            android:required="false" />
+141-->[androidx.window:window:1.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/9dd2065205488e61baaf144579589300/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+142
+143        <activity
+143-->[com.google.android.gms:play-services-base:17.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/1ea967b797818d9badf6aaa0240ca184/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+144            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+144-->[com.google.android.gms:play-services-base:17.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/1ea967b797818d9badf6aaa0240ca184/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+145            android:exported="false"
+145-->[com.google.android.gms:play-services-base:17.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/1ea967b797818d9badf6aaa0240ca184/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+146            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+146-->[com.google.android.gms:play-services-base:17.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/1ea967b797818d9badf6aaa0240ca184/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+147
+148        <provider
+148-->[com.google.firebase:firebase-common:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/e23a203530ed7f3e312c01a8115899d2/transformed/jetified-firebase-common-18.0.0/AndroidManifest.xml:12:9-16:39
+149            android:name="com.google.firebase.provider.FirebaseInitProvider"
+149-->[com.google.firebase:firebase-common:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/e23a203530ed7f3e312c01a8115899d2/transformed/jetified-firebase-common-18.0.0/AndroidManifest.xml:13:13-77
+150            android:authorities="io.branch.branchster.firebaseinitprovider"
+150-->[com.google.firebase:firebase-common:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/e23a203530ed7f3e312c01a8115899d2/transformed/jetified-firebase-common-18.0.0/AndroidManifest.xml:14:13-72
+151            android:exported="false"
+151-->[com.google.firebase:firebase-common:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/e23a203530ed7f3e312c01a8115899d2/transformed/jetified-firebase-common-18.0.0/AndroidManifest.xml:15:13-37
+152            android:initOrder="100" />
+152-->[com.google.firebase:firebase-common:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/e23a203530ed7f3e312c01a8115899d2/transformed/jetified-firebase-common-18.0.0/AndroidManifest.xml:16:13-36
+153
+154        <meta-data
+154-->[com.google.android.gms:play-services-basement:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+155            android:name="com.google.android.gms.version"
+155-->[com.google.android.gms:play-services-basement:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+156            android:value="@integer/google_play_services_version" />
+156-->[com.google.android.gms:play-services-basement:18.0.0] /Users/robert.gioia/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+157    </application>
+158
+159</manifest>

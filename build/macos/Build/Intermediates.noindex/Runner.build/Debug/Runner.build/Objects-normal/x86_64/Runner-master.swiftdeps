@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "d587bc40a4a75e5d4ae77b2063253da7ef624d0b6946f6e8c2da19257daccb25"
+build_start_time: [1678733497, 743523120]
+build_end_time: [1678733506, 996440887]
+inputs:
+  "/Users/robert.gioia/Desktop/branch_sample_flutter/macos/Flutter/GeneratedPluginRegistrant.swift": [1678733440, 453304290]
+  "/Users/robert.gioia/Desktop/branch_sample_flutter/macos/Runner/AppDelegate.swift": [1663167258, 0]
+  "/Users/robert.gioia/Desktop/branch_sample_flutter/macos/Runner/MainFlutterWindow.swift": [1663167258, 0]
